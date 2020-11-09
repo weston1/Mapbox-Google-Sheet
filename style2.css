@@ -19,7 +19,7 @@ input[type="text"] {
   height: 100vh !important;
   top: 0;
   width: 300px;
-  background-color: whitesmoke;
+  background-color: black;
   z-index: 10;
 }
 .sidebar-bg {
@@ -54,7 +54,7 @@ input[type="text"] {
 #filterResults {
   font-size: 12px;
   color: white;
-  background-color: #000;
+  background-color: #fff;
 }
 .filter-items {
   display: block;
@@ -72,8 +72,8 @@ input[type="text"] {
   user-select: none;
   display: -webkit-inline-flex;
   display: inline-flex;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   font-size: 12px;
   line-height: 2;
   border-radius: 5px;
@@ -424,10 +424,10 @@ ul li input[type="checkbox"]:checked ~ i:after {
     margin: 0 auto;
     border-radius: 0;
     z-index: 10;
-    background: whitesmoke;
+    background: black;
   }
   .sidebar-bg {
-    background: whitesmoke;
+    background: black;
     background-size: 200% auto;
     background-position: 10% 50%;
     background-repeat: no-repeat;

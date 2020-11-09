@@ -465,7 +465,7 @@ map.on("load", function () {
                 [22, 180],
               ],
             },
-            "circle-color": "#a2c967", // color of circles
+            "circle-color": "#f05923", // color of circles
             "circle-stroke-color": "white",
             "circle-stroke-width": 1,
             "circle-opacity": 0.8,
