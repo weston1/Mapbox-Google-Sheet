@@ -6,7 +6,7 @@ const config = {
     "https://docs.google.com/spreadsheets/d/1wwZgyE295fRv46K7MckU5WPU7P6xbi9cPDVEaK71YhU/gviz/tq?tqx=out:csv&sheet=Sheet1",
   center: [-111.6116328, 41.093597],
   zoom: 4,
-  title: "/assets/openvape.svg",
+  title: "Firefly Finder",
   description: "Firefly Finder",
   sideBarInfo: ["Location_Name", "Address", "City", "State", "Zip", "Phone"],
   popupTitle: ["Location_Name"],
