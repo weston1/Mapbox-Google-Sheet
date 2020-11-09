@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-size: 16px;
+}
+input[type="text"] {
+  font-size: inherit;
+}
+#mapbox {
+  background: white;
+}
+#map {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar {
+  font: 500 15px/22px "Montserrat", "Helvetica Neue", Sans-serif;
+  position: absolute !important;
+  height: 100vh !important;
+  top: 0;
+  width: 300px;
+  background-color: whitesmoke;
+  z-index: 10;
+}
+.sidebar-bg {
+  background-size: 20px auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 50px;
+  position: fixed;
+  z-index: -1;
+}
+.mapboxgl-ctrl-attrib-inner,
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.sidebar-ad {
+  max-width: 100%;
+  height: 80px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px !important;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-ad:hover {
+  background-position: bottom center;
+}
+#filterResults {
+  font-size: 12px;
+  color: white;
+  background-color: #000;
+}
+.filter-items {
+  display: block;
+}
+.filter-items .checkbox {
+  display: inline-flex;
+  padding: 0.1rem 0;
+}
+.checkbox-container,
+.radio-container,
+.switch-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 2;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.2rem 0.1rem;
+  width: 100px;
+}
+input:checked + .checkbox {
+  color: #000;
+  background-color: #f05923 !important;
+}
+
+input:checked + .checkbox {
+  border: 2px solid transparent;
+  background-color: #448ee4;
+}
+input:checked + .checkbox > .icon,
+input:checked + .radio::before {
+  display: block;
+}
+.select {
+  font-style: italic;
+  opacity: 0.7;
+}
+.select-container {
+  width: 100%;
+}
+.container {
+  max-width: 1111px;
+  width: 90%;
+  margin: 0 auto;
+  /*border-top: 1px dotted #dce7eb;*/
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-lg-6 {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.btn {
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0.5rem 0 !important;
+}
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+  background-color: #000;
+  outline: none;
+}
+.btn--stroke {
+  transition: all 0.3s ease !important;
+}
+.btn--stroke:hover,
+.btn--stroke:active {
+  background-color: #f05923 !important;
+}
+input:checked + .checkbox {
+  color: #fff;
+  background-color: #000;
+}
+.color-darken50 {
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-size: 1.5em;
+}
+a.mapboxgl-ctrl-logo {
+  width: 100px;
+  height: 23px;
+  margin: 0 0 -4px -4px;
+  display: block;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.mapboxgl-control-container {
+  position: absolute !important;
+  top: 5vh;
+  width: 100%;
+  /* max-width: 100%; */
+  width: 300px;
+  right: 5vw;
+}
+.mapboxgl-ctrl-geocoder--input {
+  font: inherit;
+  padding: 6px 30px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.geocoder-icon-search {
+  background-image: url("./assets/weed.svg") !important;
+}
+.mapboxgl-ctrl-geocoder .suggestions {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  max-height: 25vh;
+  top: 110%;
+  top: calc(100% + 6px);
+  z-index: 1000;
+  overflow: hidden;
+  /* font-size: 15px; */
+}
+.flex-parent {
+  display: -webkit-flex !important;
+  display: block !important;
+  width: 100%;
+  padding: 0.25rem 0;
+}
+.listings {
+  margin: 10px;
+  border: solid 2px #ccc;
+  min-height: 250px;
+  height: 50vh;
+  border-radius: 10px;
+}
+.listings .item {
+  font-size: 14px;
+  font: 500 12px/18px "Montserrat", "Helvetica Neue", Sans-serif;
+  text-decoration: none;
+  border-bottom: solid rgb(34, 33, 33, 0.3) 1px;
+  background-color: rgb(255, 255, 255, 0.9);
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.listings .item:hover,
+.listings .item:active {
+  color: whitesmoke;
+  background-color: rgb(34, 33, 33, 0.8);
+}
+.listings .item:last-child {
+  border-bottom: none;
+}
+
+.listings .item .title {
+  display: inline-block;
+  width: 100%;
+  color: #f05923;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+  border-left: 0;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  border-radius: 10px;
+  background: #f05923;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mapboxgl-popup-content {
+  margin-top: -50px;
+}
+.mapboxgl-popup-content {
+  padding: none !important;
+  font: 500 15px/22px "Montserrat", "Helvetica Neue", Sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgb(34, 33, 33, 0.3);
+  max-width: 300px;
+  text-align: center;
+  width: 100%;
+  z-index: 20;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+  font-size: 4rem;
+  z-index: 30;
+}
+
+.mapboxgl-popup-content h3 {
+  color: whitesmoke;
+  font-weight: 800;
+  margin: 0;
+  display: block;
+}
+
+.nav-img {
+  width: 100%;
+  height: auto;
+  max-width: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card {
+  padding: none !important;
+}
+.card-header {
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: white !important;
+  display: inline-flex;
+  width: 100%;
+}
+.card-data {
+  padding: 0.5rem 1rem 1rem 1rem;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: left;
+}
+.card-footer {
+  background-color: transparent;
+  padding: 0.5rem;
+}
+.map-icon-container {
+  background-color: ghostwhite;
+  display: inline-flex;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  margin: 0 0.2rem;
+  transition: all 0.3s ease-in-out;
+  right: 0;
+}
+.map-icon-container:hover,
+.map-icon-container:active {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.map-icons {
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.transition,
+p,
+ul li i:before,
+ul li i:after {
+  transition: all 0.3s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+}
+ul li:nth-of-type(1) {
+  margin: 10px 0 0 0;
+}
+ul li:last-of-type {
+  padding-bottom: 0;
+}
+ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+ul li i:before,
+ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #f05923;
+  width: 3px;
+  height: 9px;
+}
+ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+ul li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+ul li input[type="checkbox"]:checked ~ div {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: all 0.3s ease-in-out;
+}
+ul li input[type="checkbox"]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+ul li input[type="checkbox"]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+@media (max-width: 799px) {
+  #map {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .flex-parent {
+    display: -webkit-flex !important;
+    display: block !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .sidebar {
+    position: absolute !important;
+    height: 300px !important;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    z-index: 10;
+    background: whitesmoke;
+  }
+  .sidebar-bg {
+    background: whitesmoke;
+    background-size: 200% auto;
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    height: 120px;
+  }
+  .flex-parent .checkbox-container .checkbox-container,
+  .radio-container,
+  .switch-container {
+    font-size: 100px !important;
+  }
+  .listings {
+    border: solid 2px #ccc;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 60%;
+    height: 100px;
+  }
+  .sidebar-ad {
+    display: none;
+  }
+  .mapboxgl-control-container {
+    position: absolute !important;
+    top: 2vh;
+    max-width: 100%;
+    /* max-width: 100%; */
+    width: 90vw;
+    margin: 0 auto;
+  }
+  a.mapboxgl-ctrl-logo,
+  .mapboxgl-ctrl-attrib-inner {
+    width: 100px;
+    height: 23px;
+    margin: 0 0 -4px -4px;
+    padding: 1rem;
+    display: block;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: none;
+  }
+  .mapboxgl-ctrl-top-right {
+    top: 60vh;
+    width: 80vw;
+    z-index: 100;
+    margin: 0 auto;
+  }
+  .mapboxgl-ctrl-geocoder {
+    font-size: 14px !important;
+    background-color: whitesmoke;
+  }
+  .nav-img {
+    display: none;
+  }
+  .filter-box {
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .filter-items {
+    display: inline;
+    position: absolute;
+    width: 35%;
+    right: 0;
+    padding: 5px;
+  }
+  #removeFilters {
+    display: none;
+  }
+  .checkbox-container h3 {
+    display: none;
+  }
+  .filter-title-mobile {
+    display: none !important;
+    font-size: 50% !important;
+  }
+  .checkbox-container,
+  .radio-container,
+  .switch-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.3rem 0.2rem;
+    width: 100%;
+  }
+}
